@@ -5,7 +5,8 @@
 // After the first variable, make a variable named farewell with a data type of string that says 'Goodbye' (with single quotes)
 
 // Code here
-
+var greeting = "Hi";
+var farewell = 'Goodbye';
 
 
 //////////////////PROBLEM 2////////////////////
@@ -15,7 +16,8 @@
 // Concatenate hello and userName together and store the result in a variable called salutation
 
 //Code here
-
+var hello = "Hello";
+var userName = "Ashley";
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,7 +25,7 @@
 //Create a variable called seven that has a number data type with the value of 7
 
 //Code here
-
+var seven = 7;
 
 
 //////////////////PROBLEM 4////////////////////
@@ -32,6 +34,7 @@
 // This datatype should be a number
 
 //Code here
+var money = 75000
 
 
 
@@ -40,7 +43,7 @@
 // Make a variable called awesome and give it a value of the boolean data type true
 
 //Code here
-
+var awesome = true;
 
 
 //////////////////PROBLEM 6////////////////////
@@ -54,7 +57,7 @@ let myCar = "Jeep";
 
 
 //Code here
-
+var myCar = null;
 
 
 //////////////////PROBLEM 7////////////////////
@@ -63,8 +66,10 @@ let myCar = "Jeep";
 // Each item should be an object, and each object should have 2 properties: name (string) and age (number)
 
 //Code here
-
-
+var users = [{name: 'Ashley', age: 33} , 
+{name: 'Karma', age: 34} , 
+{name: 'Dallas', age: 35} , 
+{name:'Pedro', age: 36}];
 
 //////////////////PROBLEM 8////////////////////
 
@@ -74,6 +79,14 @@ let myCar = "Jeep";
 // Each hobbies property will have a corresponding value which will be an object
 
 //Code here
+var family = [
+ {name: 'Ashley',
+  hobbies: 'crochetting'},
+  {name: 'Jefferson',
+  hobbie: 'reading'},
+  {name: 'Benjamin',
+  hobbies: 'eating'},
+]
 
 
 
@@ -83,7 +96,8 @@ let myCar = "Jeep";
 // Each item should be an array with 2 items (numbers) in each array
 
 //Code here
-
+var gameScores = [[2,3],[4,5],[5,6]
+]
 
 
 //////////////////PROBLEM 10////////////////////
@@ -92,7 +106,17 @@ let myCar = "Jeep";
 // Each object should have 3 properties: name (string), gender (string), height (number) in each array
 
 //Code here
-
+var people = [
+  {name: 'Ashley',
+  gender: 'female',
+  height: 5.9},
+  {name: 'Jefferson',
+  gender: 'male',
+  height:6.1},
+  {name: 'Debbie',
+  gender: 'female',
+  height: 5.3}
+]
 
 
 //////////////////PROBLEM 11////////////////////
