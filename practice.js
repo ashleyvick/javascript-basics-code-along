@@ -216,8 +216,8 @@ let theBoss;
 // Edit the function assignName so that when it is invoked with the variable theName passed in as an argument,
 // the function assigns the value of theName to theBoss variable
 
-function assignName(theName){
-  let theBoss = theName ;
+function assignName(name){
+  return theBoss = theName ;
 }
 
   // Code here
@@ -334,6 +334,8 @@ function sayHello(greeting, name) {
   // the second property should be duration with the value of the second parameter
 
 function makeExercise(exerciseName, duration) {
+  return {exerciseName: exerciseName, 
+duration: duration}
 
   // Code here
 
@@ -444,8 +446,15 @@ age = "TBD";
 // The variable age will always be a number and will be changed during testing
 
 function findCorrectTransportation(){
-  // Code here
+  if (age >= 3 && age <= 7){
+    return "tricycle"
+  } if (age >= 8 && age <= 15) {
+    return "bicycle"
+  } if (age > 15) {
+    return "car"
+  }
 };
+  // Code here
 
 
 
@@ -465,8 +474,13 @@ let temp = "TBD";
 // The variable age will always be a number and will be changed during testing
 
 function doIGetIceCream(){
+  if (temp === "hot" &&cash){
+    return "Get Ice Cream!"
+  }
+  else {
+    return "Save up for another day."}
+  }
   // Code here
-};
 
 
 
@@ -485,6 +499,9 @@ let work = "TBD";
 // The chores and work variables will always be true or false and will be changed during testing
 
 function doIHaveFreeTime(){
+  if (chores === false || work === false) {
+    return "free time!"
+  }
   
   // Code here
 };
@@ -508,6 +525,10 @@ let brakes = "TBD";
 // The brakes variables will always be a boolean and will be changed during testing
 
 function setCrash(){
+  if (currentSpeed === "fast" && brakes === false) {
+    return crash = true 
+  }
+  else {}
   // Code here
 };
 
@@ -531,6 +552,14 @@ user = {
 // The arguments passed into makePurchase will always be numbers and will be changed during testing
 
 // Code here
+
+function makePurchase(priceOfItem) {
+if (priceOfItem <= user.total){
+  return user.total -= priceOfItem}
+else  {
+  return "not enough funds"
+}
+}
 
 
 
@@ -562,3 +591,12 @@ function sleep(){
 // The arguments passed into decisionMaker will always be true or false and will be changed during testing
 
 // Code here
+function decisionMaker(hunger, tired) {
+  if (hunger && !tired) {
+    return eat() }
+  if (!hunger && tired) { 
+    return sleep()
+  }
+  else {
+    return "undecided"
+  } }
