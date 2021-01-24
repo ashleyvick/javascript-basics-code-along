@@ -18,6 +18,7 @@ var farewell = 'Goodbye';
 //Code here
 var hello = "Hello";
 var userName = "Ashley";
+var salutation = hello + userName;
 
 
 //////////////////PROBLEM 3////////////////////
@@ -57,7 +58,7 @@ let myCar = "Jeep";
 
 
 //Code here
-var myCar = null;
+myCar = null;
 
 
 //////////////////PROBLEM 7////////////////////
@@ -79,15 +80,16 @@ var users = [{name: 'Ashley', age: 33} ,
 // Each hobbies property will have a corresponding value which will be an object
 
 //Code here
-var family = [
- {name: 'Ashley',
-  hobbies: 'crochetting'},
-  {name: 'Jefferson',
-  hobbie: 'reading'},
-  {name: 'Benjamin',
-  hobbies: 'eating'},
-]
+var family = {
+  "Ashley": {hobbies: {}},
+  "Jefferson": {hobbies: {}},
+  "Benjamin": {hobbies: {}},
+}
 
+// //let family = {"Addie": {hobbies: {}}, 
+// "Juliette": {hobbies: {}},
+// "Lorelei": {hobbies: {}}
+// };
 
 
 //////////////////PROBLEM 9////////////////////
@@ -125,7 +127,11 @@ var people = [
 // This object should have 3 properties: name (string), state (string), favoriteCountrySong (string)
 
 //Code here
-
+var cowboy = {
+  name: 'Dallas',
+  state: 'Texas',
+  favoriteCountrySong: 'Goodbye Earl'
+}
 
 
 //////////////////PROBLEM 12////////////////////
@@ -155,15 +161,14 @@ function launch() {
 
 
 //Code here
-
-
+var dataTypes = [42, 'meaning', true, [1,2,3,4,5], spaceship, launch,] 
 
 //////////////////PROBLEM 13////////////////////
 
 // Edit the function called "sum" so that when it is invoked, it returns the sum of its parameters num1 and num2
 
 function sum(num1, num2){
-  return // Code here
+  return num1 + num2 // Code here
 };
   
 
@@ -171,14 +176,15 @@ function sum(num1, num2){
 //////////////////PROBLEM 14////////////////////
   
 // Create two variables number1 and number2 and assign them number values
-
+var number1 = 2
+var number2 = 4
 // Code here
 
 
 // Next, edit the function called "multiply" so that when it is invoked, it returns the result of multiplying number1 and number2
 
 function multiply() {
-  return // Code here
+  return number1 * number2;// Code here
 };
 
 
@@ -194,7 +200,7 @@ let food = 'pizza';
 // In your solution code, use template strings (not concatenation) and use the food variable provided
 
 function favFood(){
-  return // Code here
+  return `My favorite food is ${food}` // Code here
 };
 
 
@@ -210,9 +216,11 @@ let theBoss;
 // Edit the function assignName so that when it is invoked with the variable theName passed in as an argument,
 // the function assigns the value of theName to theBoss variable
 
-function assignName(name){
+function assignName(theName){
+  let theBoss = theName ;
+}
+
   // Code here
-};
 
 
 
@@ -231,7 +239,9 @@ let user = {
 // edit the function getName so that it accesses the name property of the user object and returns its value
 
 function getName(userObj){
-  return // Code here
+  return user.name
+
+   // Code here
 };
 
 
@@ -253,16 +263,18 @@ let calendar = {
 // Make sure you are accessing it from the weekDays array of the calendar object
 
 function getWeekDay(calendar){
-  return // Code here
+  return calendar.weekDays[2]// Code here
 }
-
 
 
 //////////////////PROBLEM 19////////////////////
 
 // Create a function called "fn" that takes in a parameter and returns that parameter
 
-// Code here
+function fn(name) {
+  return (name)
+
+} // Code here
 
 
 
@@ -277,14 +289,18 @@ let lastName = "Jones";
 // Create a function called createName that takes in no parameters and returns the result of concatenating firstName and lastName (provided)
 // The returned value should include a space between the first and last names and should use concatenation (not template strings)
 
+function createName() {
+return firstName + " " + lastName; 
 // Code here
 
-
+}
 
 //////////////////PROBLEM 21////////////////////
 
 // Create a function called showMeSeven that returns the number 7
 
+function showMeSeven() {
+return 7 }
 // Code here
 
 
@@ -293,8 +309,9 @@ let lastName = "Jones";
 
 // Create a function called multiplier that takes two parameters (numbers) and returns the product of the two parameters
 
-// Code here
-
+function multiplier (num1, num2) {
+return num1 * num2 // Code here
+}
 
 
 //////////////////PROBLEM 23////////////////////
@@ -303,7 +320,9 @@ let lastName = "Jones";
 // This function should return a string that is the result of concatenating the greeting and name parameters
 // The returned value should include a space between the greeting and name parameters
 
-// Code here
+function sayHello(greeting, name) {
+  return greeting + " " + name
+}// Code here
 
 
 
@@ -314,9 +333,11 @@ let lastName = "Jones";
   // the first property should be exerciseName with the value of the first parameter
   // the second property should be duration with the value of the second parameter
 
-// Code here
+function makeExercise(exerciseName, duration) {
 
+  // Code here
 
+}
 
 //////////////////PROBLEM 25////////////////////
 
@@ -330,8 +351,13 @@ let age = "TBD";
 // The variable age will be changed during testing
 
 function isOldEnough(){
+  if (age > 21) {
+    return "old enough"}
+  else {
+    return "not yet"}
+  }
   // Code here
-};
+
 
 
 
@@ -347,8 +373,13 @@ let workEthic = "TBD";
 // The variable workEthic will be changed during testing
 
 function successPredictor(){
+  if (workEthic === "great") {
+    return "success at DevMountain"}
+  else {
+    return "failure at DevMountain"
+  }
+  }
   // Code here
-};
 
 
 
@@ -364,8 +395,13 @@ let cookieType = "TBD";
 // The variable cookieType will be changed during testing
 
 function eatOrTrash(){
+  if (cookieType === "raisin") {
+    return "throw in trash"}
+  else {
+    return "eat"
+  }
+  }
   // Code here
-};
 
 
 
@@ -382,6 +418,11 @@ let yourTeamScore = "TBD";
 // The myTeamScore and yourTeamScore variables will be changed during testing
 
 function finalScore(){
+  if (myTeamScore > yourTeamScore) {
+  return "we are the champions" }
+  else {
+    return ":("
+  }
   // Code here
 };
 
@@ -444,6 +485,7 @@ let work = "TBD";
 // The chores and work variables will always be true or false and will be changed during testing
 
 function doIHaveFreeTime(){
+  
   // Code here
 };
 
